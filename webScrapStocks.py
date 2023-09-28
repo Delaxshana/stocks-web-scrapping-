@@ -11,7 +11,6 @@ for page_number in range(1,5):
     url = url_start + url_end + str(page_number)
     pages.append(url)
 
-file = open('stocks.txt','w')
 
 values_list = []
 for page in pages:
@@ -31,11 +30,15 @@ for page in pages:
 
         values_list.append(row_values)
 
-
-
+# to output txt file
+file = open('stocks.txt','w')
 for stock in values_list:
     file.write(str(stock) + "\n")
 file.close()
+
+# to output in csv file
+df = pd.DataFrame(values_list)
+df.to_csv('stocksData.csv', index=False, header=False)
 
 
 
