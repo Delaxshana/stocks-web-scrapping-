@@ -13,4 +13,4 @@ step 4 : code
 step 5 : Run the code and extract the data 
 
 step 6 : Store the data in the required format 
-I have stored in txt format
+
